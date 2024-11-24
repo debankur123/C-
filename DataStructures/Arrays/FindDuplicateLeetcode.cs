@@ -36,11 +36,28 @@ namespace DataStructures.Arrays
             }
             return [.. newArray];
         }
-
+        // Using a Hashset can reduce timecomplexity to O(N) but not space complexity to O(1).
+        public int[] DuplicateElementsUsingHashSet(int[] elements)
+        {
+            HashSet<int> set = [];
+            HashSet<int> duplicates = [];
+            for(int indexCount=0;indexCount<elements.Length;indexCount++)
+            {
+                if(set.Contains(elements[indexCount]))
+                {
+                    duplicates.Add(elements[indexCount]);
+                }
+                else 
+                {
+                    set.Add(elements[indexCount]);
+                }
+            }
+            return [.. duplicates];
+        }
 
         public void PrintArray(int[] elements)
         {
-            int[] result = DuplicateElements2(elements);
+            int[] result = DuplicateElementsUsingHashSet(elements);
             Console.WriteLine(string.Join(", ", result));
         }
 
