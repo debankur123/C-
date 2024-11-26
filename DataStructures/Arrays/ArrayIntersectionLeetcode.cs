@@ -4,7 +4,7 @@ namespace DataStructures.Arrays
     {
         public int[] Intersection(int[] nums1, int[] nums2)
         {
-            // suppose we haven 2 arrays arr[1,2,3,4,5] arr[2,3,4,5,6] then the Intersection will be the
+            // suppose we have 2 arrays arr[1,2,3,4,5] arr[2,3,4,5,6] then the Intersection will be the
             // elements that are common in both the arrays [2,3,4,5]
             var commonElements = new List<int>();
             Array.Sort(nums1);

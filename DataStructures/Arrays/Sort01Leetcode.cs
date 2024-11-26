@@ -2,17 +2,17 @@ namespace DataStructures.Arrays
 {
     public class Sort01Leetcode
     {
-        public void Sort01(int[] nums)
+        public static void Sort01(int[] nums)
         {
             // We will do this using a two pointer approach
             int leftIndex = 0,rightIndex = nums.Length - 1;
             while(leftIndex < rightIndex)
             {
-                while(nums[leftIndex] == 0 && leftIndex < rightIndex)
+                if(nums[leftIndex] == 0 && leftIndex < rightIndex)
                 {
                     leftIndex++;
                 }
-                while(nums[rightIndex] == 1 && leftIndex < rightIndex)
+                if(nums[rightIndex] == 1 && leftIndex < rightIndex)
                 {
                     rightIndex--;
                 }
@@ -34,7 +34,7 @@ namespace DataStructures.Arrays
         {
             var solution = new Sort01Leetcode();
             var actualOutput = (int[])InputArray.Clone();
-            solution.Sort01(actualOutput);
+            Sort01Leetcode.Sort01(actualOutput);
             Console.WriteLine("Input Array: " + string.Join(",", InputArray));
             Console.WriteLine("Expected Output: " + string.Join(",", ExpectedOutput));
             Console.WriteLine("Actual Output: " + string.Join(",", actualOutput));
