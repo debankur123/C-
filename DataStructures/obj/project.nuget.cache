@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "uCc5IwV2oJI=",
+=======
+  "dgSpecHash": "vhf/ME+r2RvNGe7p2VPeeXJg2cMeblG0Vb/CMCcosfgb7Xpl4MaySWFhjoiez8PI2OH42XMCygD7s4ixW0sbYA==",
+>>>>>>> 8630fc99421878789464ef779479d3b43e18756f
   "success": true,
-  "projectFilePath": "D:\\C#\\DataStructures\\DataStructures.csproj",
+  "projectFilePath": "/home/debankur/MyWorkSpace/C-/DataStructures/DataStructures.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
