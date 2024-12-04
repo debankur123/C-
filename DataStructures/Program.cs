@@ -32,7 +32,9 @@ Console.WriteLine("");*/
 // int target = 5;
 // obj.PrintElements(arr,target);
 
-Test.RunTestSort01();
+TestSort012.RunTest_Sort012();
+
+
 
 
 

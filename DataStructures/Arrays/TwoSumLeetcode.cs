@@ -5,7 +5,7 @@ namespace DataStructures.Arrays
 {
     public class TwoSumLeetcode
     {
-        public int[] PairSum(int[] nums,int target)
+        public static int[] PairSum(int[] nums,int target)
         {
             Dictionary<int, int> map = new Dictionary<int, int>();
             for(int indexCounter = 0; indexCounter < nums.Length; indexCounter++)
@@ -31,11 +31,11 @@ namespace DataStructures.Arrays
             private const int Target = 5;
             private static int[] ExpectedOutput = [2, 3]; // 1 (index 2) + 4 (index 3) = 5
 
-            public static void RunTestTwoSumLeetcode()
+            public static void RunTest_TwoSumLeetcode()
             {
                 var solution = new TwoSumLeetcode();
 
-                int[] actualOutput = solution.PairSum(InputArray, Target);
+                int[] actualOutput = PairSum(InputArray, Target);
 
                 Console.WriteLine("Input Array: " + string.Join(",", InputArray));
                 Console.WriteLine("Target: " + Target);

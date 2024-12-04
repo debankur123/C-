@@ -1,6 +1,6 @@
 namespace DataStructures.Arrays
 {
-    public class Sort01Leetcode
+    public static class Sort01Leetcode
     {
         public static void Sort01(int[] nums)
         {
@@ -30,9 +30,9 @@ namespace DataStructures.Arrays
     {
         private static int[] InputArray = [1, 1, 0, 0, 0, 0, 1, 0];
         private static int[] ExpectedOutput = [0, 0, 0, 0, 0, 1, 1, 1];
-        public static void RunTestSort01()
+        public static void RunTest_Sort01()
         {
-            var solution = new Sort01Leetcode();
+            //var solution = new Sort01Leetcode();
             var actualOutput = (int[])InputArray.Clone();
             Sort01Leetcode.Sort01(actualOutput);
             Console.WriteLine("Input Array: " + string.Join(",", InputArray));

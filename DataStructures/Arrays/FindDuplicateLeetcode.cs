@@ -5,14 +5,12 @@ namespace DataStructures.Arrays
         public int[] DuplicateElements(int[] nums) // Gives TLE at Leetcode or other online platforms
         {
             List<int> newArray = [];
-            int countDuplicates = 1;
             for (int ithCount = 0; ithCount < nums.Length; ithCount++)
             {
                 for (int jthCount = ithCount + 1; jthCount < nums.Length; jthCount++)
                 {
                     if (nums[ithCount] == nums[jthCount])
                     {
-                        countDuplicates++;
                         if (!newArray.Contains(nums[ithCount]))
                             newArray.Add(nums[ithCount]);
                     }
@@ -36,8 +34,8 @@ namespace DataStructures.Arrays
             }
             return [.. newArray];
         }
-        // Using a Hashset can reduce timecomplexity to O(N) but not space complexity to O(1).
-        public int[] DuplicateElementsUsingHashSet(int[] elements)
+        // Using a Hashset can reduce time complexity to O(N) but not space complexity to O(1).
+        public static int[] DuplicateElementsUsingHashSet(int[] elements)
         {
             HashSet<int> set = [];
             HashSet<int> duplicates = [];
