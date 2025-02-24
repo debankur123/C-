@@ -1,6 +1,6 @@
 namespace DataStructures.Arrays
 {
-    // I have two arrays [2, 4, 6, 8, 10, 12];
+    // I have an arrays [2, 4, 6, 8, 10, 12];
     // After swapping alternate it would be -> [4,2,8,6,12,10] 
 
     public static class SwapAlternate 

@@ -7,9 +7,18 @@ public static class Sort012Leetcode
         int count0 = 0, count1 = 0, count2 = 0;
         for (int indexCount = 0; indexCount < arr.Length; indexCount++)
         {
-            if (arr[indexCount] == 0) count0++;
-            else if (arr[indexCount] == 1) count1++;
-            else count2++;
+            switch (arr[indexCount])
+            {
+                case 0:
+                    count0++;
+                    break;
+                case 1:
+                    count1++;
+                    break;
+                default:
+                    count2++;
+                    break;
+            }
         }
         for (int indexCount = 0; indexCount < count0; indexCount++)
         {
@@ -24,26 +33,26 @@ public static class Sort012Leetcode
             arr[indexCount] = 2;
         }
     }
-    public static void DutchNationalFlagAlgorithm(List<int> arr) // Time complexity remains O(N)
+    public static void DutchNationalFlagAlgorithm(List<int> elements) // Time complexity remains O(N)
     {
-        int leftIndex = 0, rightIndex = arr.Count - 1;
+        int leftIndex = 0, rightIndex = elements.Count - 1;
         int currentIndex = 0;
         while (currentIndex <= rightIndex)
         {
-            if (arr[currentIndex] == 0)
+            switch (elements[currentIndex])
             {
-                (arr[currentIndex], arr[leftIndex]) = (arr[leftIndex], arr[currentIndex]);
-                leftIndex++;
-                currentIndex++;
-            }
-            else if (arr[currentIndex] == 2)
-            {
-                (arr[currentIndex], arr[rightIndex]) = (arr[rightIndex], arr[currentIndex]);
-                rightIndex--;
-            }
-            else
-            {
-                currentIndex++;
+                case 0:
+                    (elements[currentIndex], elements[leftIndex]) = (elements[leftIndex], elements[currentIndex]);
+                    leftIndex++;
+                    currentIndex++;
+                    break;
+                case 2:
+                    (elements[currentIndex], elements[rightIndex]) = (elements[rightIndex], elements[currentIndex]);
+                    rightIndex--;
+                    break;
+                default:
+                    currentIndex++;
+                    break;
             }
         }
     }
@@ -54,7 +63,7 @@ public static class Sort012Leetcode
 }
 public static class TestSort012
 {
-    private static readonly int[] InputArray = [2, 0, 2, 1, 1, 0];
+    private static readonly int[] InputArray     = [2, 0, 2, 1, 1, 0];
     private static readonly int[] ExpectedOutput = [0, 0, 1, 1, 2, 2];
     public static void RunTest_Sort012()
     {
